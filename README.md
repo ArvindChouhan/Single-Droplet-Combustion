@@ -59,8 +59,10 @@ To run the solver for a **single, pure fuel** (and not a precursor mixture):
 
 1.  **Initial Concentration:** In the `Case/0/` folder, set the appropriate initial concentration of the desired fuel, e.g., Y_XYLENE_L to 1, and **set all other species concentrations to 0**.
 2.  **Lewis Numbers ($\text{Le}$):** The Lewis numbers, Le_2 and Le_eff, can be controlled in two ways:
-      * **Option A: Transport Properties File:** Change the values directly in the `Case/constant/transport_properties` file.
-      * **Option B: Solver Source Code:** Modify the macro definitions **`Le_NUM_GAS_2`** and **`Le_NUM_GAS_eff`** within the solver's source code, specifically in the **`Properties.H`** file. You must recompile the solver (`wmake`) after changing these values in the source code.
+      * **Option A: Transport Properties File:** Change the values directly in the `Case/constant/transport_properties` file. <img width="693" height="135" alt="image" src="https://github.com/user-attachments/assets/42ed987d-fc38-4c96-a49d-edbdd94c5a70" />
+
+      * **Option B: Solver Source Code:** Modify the macro definitions **`Le_NUM_GAS_2`** and **`Le_NUM_GAS_eff`** within the solver's source code, specifically in the **`Properties.H`** file. You must recompile the solver (`wmake`) after changing these values in the source code. <img width="1277" height="47" alt="image" src="https://github.com/user-attachments/assets/3b4bfa36-3658-4d66-ad1e-e36db3ef9487" />
+
 
 #### **2. Specifying Fluid Properties**
 
