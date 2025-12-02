@@ -1,0 +1,90 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+        Hv_PRE               528e+3;    // Ren (taking equal to 2EHA)
+        Hv_2EHA              528e+3;    // Rosebrock
+        Hv_XYLENE            341e+3;    // Rosebrock
+        
+        Hc_PRE             25480e+3;    // Rosebrock
+        Hc_2EHA            33280e+3;    // Rosebrock
+        Hc_XYLENE          42871e+3;    // Rosebrock
+         
+        R                    8.3143;
+      
+        Tb_PRE                  569;    // Google
+        Tb_2EHA                 501;    // Rosebrock
+        Tb_XYLENE            412.25;    // Rosebrock
+        
+        Tc_2EHA              680.35;    // Ren (Tc used to calculate thrmal conductivity, for PRE thermal conductivity = 2EHA, so not defining Tc for PRE)
+        Tc_XYLENE            633.11;    // Ren
+        
+        Tinf                    300;
+        Ta                     3800;    // For reference not using
+      
+        MW_PRE                0.405;    // Google
+        MW_PRE_1              0.262;    // Google
+        MW_2EHA               0.144;    // Rosebrock  
+        MW_XYLENE             0.106;    // Rosebrock
+        MW_H2O                0.018; 
+        MW_CO2                0.044;
+       
+         
+        VM_PRE                0.00032;   // MW/density
+        VM_PRE_1              0.000208;   // MW/density
+        VM_2EHA               0.00016;   // MW/density
+        VM_XYLENE             0.00012;   // MW/density   
+         
+        p_atm                     1;
+      
+        v_PRE                  1.77;
+        v_XYLENE               3.16; 
+        v_2EHA                 2.44;
+     
+        Y_O2_Inf                  1;
+      
+        Le_NUM_LIQUID             5;    // Liquid lewis number   
+        Le_NUM_GAS_2              1;    // Changing in the solver 
+        Le_NUM_GAS_eff          0.3;    // Changing in the solver
+        Ar_NUM                  50;
+        Da_NUM                  50;
+     
+        ri                    61e-6;
+     
+        rho_XYLENE              865;    // Google 
+        rho_2EHA                903;    // Google 
+        rho_PRE                1251;    // Sn2EHA Bottle  
+        rho_PRE_1              1251;
+         
+        UC_temp                   1;
+        UC_space                  1;
+        UC_K                      1;   
+        UC_rho                    1;
+        UC_D                      1;
+        UC_Cp                     1;
+
+       
+
+// ************************************************************************* //
+
+
+
+
+
+
+
+
+
+

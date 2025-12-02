@@ -1,0 +1,47 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      Y_2EHA_L;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField   uniform 0.03;
+
+boundaryField
+{
+    leftWall
+    {
+        type            zeroGradient;
+    }
+
+    rightWall
+    {
+        type            groovyBC;
+        value           uniform 0.03;
+        gradientExpression "gradient";
+        fractionExpression "0";
+        variables (
+            "gradient= min(Y_2EHA_L_BC);"                 // Taking a value of T_BC doesnt matter min or max, both are same
+        );
+        timelines       (
+        );
+    }
+
+    defaultFaces
+    {
+        type            empty;
+    }
+}
+
+// ************************************************************************* //
