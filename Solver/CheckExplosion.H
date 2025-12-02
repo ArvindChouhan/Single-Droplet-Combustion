@@ -1,0 +1,10 @@
+
+           
+      X_PRE_L = (Y_PRE_L/MW_PRE) / (Y_PRE_L/MW_PRE + Y_PRE_L_1/MW_PRE_1 + Y_2EHA_L/MW_2EHA + Y_XYLENE_L/MW_XYLENE);
+      X_PRE_L_1 = (Y_PRE_L_1/MW_PRE_1) / (Y_PRE_L/MW_PRE + Y_PRE_L_1/MW_PRE_1 + Y_2EHA_L/MW_2EHA + Y_XYLENE_L/MW_XYLENE);
+      X_2EHA_L = (Y_2EHA_L/MW_2EHA) / (Y_PRE_L/MW_PRE + Y_PRE_L_1/MW_PRE_1 + Y_2EHA_L/MW_2EHA + Y_XYLENE_L/MW_XYLENE);
+      X_XYLENE_L = (Y_XYLENE_L/MW_XYLENE) / (Y_PRE_L/MW_PRE + Y_PRE_L_1/MW_PRE_1 + Y_2EHA_L/MW_2EHA + Y_XYLENE_L/MW_XYLENE);
+              
+      p_mix = p_atm *( X_PRE_L * exp((Hv_PRE*MW_PRE/R)*(1/Tb_PRE-1/T)) + X_PRE_L_1 * exp((Hv_PRE*MW_PRE_1/R)*(1/Tb_PRE-1/T)) + X_2EHA_L * exp((Hv_2EHA*MW_2EHA/R)*(1/Tb_2EHA-1/T)) + X_XYLENE_L * exp((Hv_XYLENE*MW_XYLENE/R)*(1/Tb_XYLENE-1/T)) ); 
+
+
